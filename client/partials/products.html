@@ -1,0 +1,36 @@
+<div class='container' ng-controller='ProductController'>
+	<div id='sideNav'>
+
+		<label>Search Products: </label><input type='text' ng-model='filterProducts'>
+
+		<h4>Add a new product</h4>
+		</form>
+		<form>
+			<label>Album: </label>
+				<input type='text' ng-model='newProduct.album'>
+			<label>Artist: </label>
+				<input type='text' ng-model='newProduct.artist'>
+			<label>Designer: </label>
+				<input type='text' ng-model='newProduct.designer'>
+			<label>Initial Quantity: </label>
+				<input type='number' ng-model='newProduct.quantity'>
+			<label>Image (url): </label>
+				<input type='text' ng-model='newProduct.imageUrl'>
+			<input type='submit' ng-click='addProduct(newProduct)' value='Create'>
+		</form>
+	</div>
+
+	<div id='productsProducts'>
+		<div class='productsProduct' ng-repeat='product in products | filter: filterProducts'>
+			<img ng-src='{{product.imageUrl}}' alt='album cover'>
+			<ul>
+				<li ng-bind='product.album'></li>
+				<li ng-bind='product.artist'></li>
+				<li ng-bind='product.designer'></li>
+				<li ng-bind='product.quantity + " left"'></li>	
+			</ul>
+		</div>
+
+	</div>
+	<a href=''>show more...</a>
+</div>

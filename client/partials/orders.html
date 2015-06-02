@@ -1,0 +1,44 @@
+<div class='container' ng-controller='OrderController'>
+	<form>
+		<h4>Add a New Order</h4>
+		<label>Customer: </label>
+			<select ng-model='newOrder._customer'>
+				<option ng-repeat='customer in customers' ng-bind='customer.name' value='{{customer._id}}' ></option>
+			</select>
+		<label>Product: </label>
+			<select ng-model='newOrder.product'>
+				<option ng-repeat='product in products' ng-bind='product.album' value='{{product._id}}'></option>
+			</select>
+		<label>Quantity: </label>
+			<select ng-model='newOrder.quantity'>
+				<option value='1'>1</option>
+				<option value='2'>2</option>
+				<option value='3'>3</option>
+				<option value='4'>4</option>
+				<option value='5'>5</option>
+			</select>
+			<input type='submit' value='Order' ng-click='addOrder(newOrder)'>
+	</form>
+
+	<input type='text' ng-model='filterOrders'>
+
+	<table>
+		<thead>
+			<tr>
+				<th>Customer Name</th>
+				<th>Product</th>
+				<th>Quantity</th>
+				<th>Date</th>
+			</tr>
+		</thead>
+		<tbody>
+			<tr ng-repeat='order in orders'>
+				<td ng-bind='order._customer.name' value='{{order._id}}'></td>
+				<td ng-bind='order.product[0].album' value='{{order._id}}'></td>
+				<td ng-bind='order.quantity' value='{{order._id}}'></td>
+				<td ng-bind='order.date' value='{{order._id}}'></td>
+			</tr>
+		</tbody>
+	</table>
+
+</div>

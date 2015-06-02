@@ -1,0 +1,46 @@
+* {
+	/*color: maroon;*/
+}
+
+ul li {
+	display: inline;
+	padding: 0 1em;
+	border-right: solid gray 1px;
+}
+
+form {
+	display:inline-block;
+	vertical-align: top;
+}
+
+#dashboardProducts{
+	display:inline-block;	
+}
+	.dashboardProduct {
+		height: 7em;
+		width: 7em;
+		background-color: lavender;
+	}
+
+	.dashboardPortrait {
+		height: 2em;
+		width: 2em;
+		background-color: lavenderblush;
+	}
+
+	.productsProduct {
+		display: inline-block;
+		vertical-align: top;
+		margin: 1em;
+		background-color: lavender;
+	}
+
+	.productsProduct img {
+		height: 150px;
+		width: 150px;
+	}
+
+	.productsProduct ul li {
+		border:0;
+		display:block;
+	}
